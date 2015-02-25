@@ -1,0 +1,26 @@
+<h1> <%= @company.name %> </h1><br><p>
+</p>
+
+<p><strong>Company Catch Phrase: </strong> <%= @company.catch_phrase %></p><br>
+<p><strong>Company Catch Phrase: </strong> <%= @company.suffix %></p>
+
+
+<table class="table table-striped">
+  Company Reviews
+  <tr>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Rating</th>
+    <th>User</th>
+  </tr>
+  <tbody>
+    <% @company_reviews.each do |company_review| %>
+    <tr>
+      <td><%= company_review.title %></td>
+      <td><%= company_review.description %></td>
+      <td><%= company_review.rating %></td>
+      <td><%= company_review.user.name %> </td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>

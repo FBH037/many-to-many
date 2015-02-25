@@ -1,9 +1,12 @@
 class CompanyReviewsController < ApplicationController
 
+
   def new
     @company = Company.find(params[:company_id])
     @company_review = CompanyReview.new
   end
+
+
 
   def create
     @company  = Company.find(params[:company_id])
@@ -20,7 +23,7 @@ class CompanyReviewsController < ApplicationController
 
   private
   def company_review_params
-    params.require(:company_review).permit(:title, :desciption, :rating)
+    params.require(:company_review).permit(:title, :description, :rating, :user_id, :company_id)
   end
-  
+
 end

@@ -5,4 +5,6 @@ class ReviewsController < ApplicationController
     @product_reviews = ProductReview.all
   end
 
+
+
 end

@@ -1,0 +1,21 @@
+<br>
+<br>
+<table class="table table-striped">
+  Product Reviews
+  <tr>
+    <th> Title</th>
+    <th>Description</th>
+    <th>Rating</th>
+    <th>User</th>
+  </tr>
+  <tbody>
+    <% @product_reviews.each do |product_review| %>
+    <tr>
+      <td><%= product_review.title %></td>
+      <td><%= product_review.description %></td>
+      <td><%= product_review.rating %></td>
+      <td><%= product_review.user.name %> </td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
